@@ -20,6 +20,8 @@ function save() {
   localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data))
 }
 
+var colorScheme = getComputedStyle(document.body, ":after").content
+
 const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 nlwSetup.setData(data)
 nlwSetup.load()
